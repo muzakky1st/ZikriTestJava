@@ -1,0 +1,9 @@
+com\exam\ZikriMuzakkyExam\repository\UserRepository.class
+com\exam\ZikriMuzakkyExam\ZikriMuzakkyExamApplication.class
+com\exam\ZikriMuzakkyExam\controller\ApplicationController.class
+com\exam\ZikriMuzakkyExam\entity\JobList.class
+com\exam\ZikriMuzakkyExam\config\SecurityConfig.class
+com\exam\ZikriMuzakkyExam\entity\User.class
+com\exam\ZikriMuzakkyExam\service\CustomUserDetailService.class
+com\exam\ZikriMuzakkyExam\service\CustomUserDetails.class
+com\exam\ZikriMuzakkyExam\controller\AdminController.class

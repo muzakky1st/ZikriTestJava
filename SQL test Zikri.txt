@@ -1,0 +1,17 @@
+1. Recapitulation of number of accounts owned by every customer.
+>>select distinct(count(acc.acc_number) as total_account),concat(cust.firstname," ", cust.lastname) as fullname, acc.acc_date_created
+from customer cust
+inner join account acc on cust.cust_id = acc.owner
+group by acc.acc_date_created desc;
+
+2. All transactions created by John Michael sorted by account number and
+transaction date
+>>select acc.acc_number, acc.acc_balance, concat(cust.first_name," ",cust.last_name) as full_name, trans.trs_from_account, transtf.trs_to_account, trans.trs_date, trans.trs_amount, trans.trs_type, trans.trs_status
+from account acc
+inner join customer cust on acc.acc_owner = cust.cust_id
+inner join transaction trans on acc.acc_number = trans.trs_from_account
+inner join transaction_transfer transtf on acc.acc_number = transtf.trs_to_account transtf.trs_to_account
+where cust.cust_firstname like '%John%'
+and cust.cust_lastname like '%Michael%'
+group by acc.acc_number ,full_name, trans.trs_from_account, transtf.trs_to_account, trans.trs_date, trans.trs_amount, trans.trs_type, trans.trs_status
+order by acc.acc_number, trans.trs_date desc;

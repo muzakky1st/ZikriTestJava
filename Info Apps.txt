@@ -1,0 +1,22 @@
+Info Apps:
+
+-IDE : intellij IDEA
+-server port : 9900
+-database port : 3306
+-database : mysql phpmyadmin (xampp v3.2.2)
+-database name : dbloginjob
+-java version : 11
+
+
+Access register: 
+http://localhost:9900/secure/path/admin/add 
+parameter "username" and "password"
+
+access job list:
+http://localhost:9900/rest/auth/job-list
+
+access job detail (by id)
+http://localhost:9900/rest/auth/job-detail/{id}
+
+access generate csv
+http://localhost:9900/rest/auth/generate-csv
